@@ -14,7 +14,7 @@ spec:
         app: glamarabica
     spec:
       containers:
-        - image: imanelo/glamarabica:0.2
+        - image: imanelo/glamarabica:0.1
           name: guestbook-ui
           ports:
             - containerPort: 8080
