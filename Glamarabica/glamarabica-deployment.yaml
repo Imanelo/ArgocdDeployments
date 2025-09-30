@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: glamarabica
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: glamarabica
+  template:
+    metadata:
+      labels:
+        app: glamarabica
+    spec:
+      containers:
+        - image: imanelo/glamarabica:0.2
+          name: guestbook-ui
+          ports:
+            - containerPort: 8080
