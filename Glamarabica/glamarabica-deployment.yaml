@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: glamarabica
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: glamarabica
     spec:
       containers:
-        - image: imanelo/glamarabica:0.1
+        - image: imanelo/glamarabica:0.2
           name: glamarabica
           ports:
             - containerPort: 8080
